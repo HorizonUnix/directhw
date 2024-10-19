@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D9932DD0D0F97EF00760F43 /* DirectHW.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5D9932B30D0F95DD00760F43 /* DirectHW.cpp */; };
+		AB83950A25B4B4DA001D8E16 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB66BE3125B4AE2C00943C69 /* IOKit.framework */; };
+		AB83952A25B4B69B001D8E16 /* DirectHW.h in Headers */ = {isa = PBXBuildFile; fileRef = FD12A6710E9235DB004BBD7B /* DirectHW.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB83953125B4B6A1001D8E16 /* DirectHW.c in Sources */ = {isa = PBXBuildFile; fileRef = FD12A6700E9235DB004BBD7B /* DirectHW.c */; };
+		AB83953525B4B6A5001D8E16 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB66BE3125B4AE2C00943C69 /* IOKit.framework */; };
+		FDC4F2BC0E923E0C0006B2A5 /* DirectHW.h in Headers */ = {isa = PBXBuildFile; fileRef = FD12A6710E9235DB004BBD7B /* DirectHW.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDC4F2BD0E923E100006B2A5 /* DirectHW.c in Sources */ = {isa = PBXBuildFile; fileRef = FD12A6700E9235DB004BBD7B /* DirectHW.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5D9932B30D0F95DD00760F43 /* DirectHW.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirectHW.cpp; sourceTree = "<group>"; tabWidth = 4; };
+		5D9932B40D0F95DD00760F43 /* DirectHW.hpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = DirectHW.hpp; sourceTree = "<group>"; tabWidth = 4; };
+		5D9932D60D0F97D000760F43 /* DirectHW.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DirectHW.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D9932D70D0F97D000760F43 /* DirectHW-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DirectHW-Info.plist"; sourceTree = "<group>"; };
+		63ECBFC82984EDB80031C612 /* MacOSMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacOSMacros.h; sourceTree = "<group>"; };
+		AB66BE3125B4AE2C00943C69 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		AB83952325B4B678001D8E16 /* libDirectHW.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDirectHW.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD12A6700E9235DB004BBD7B /* DirectHW.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DirectHW.c; sourceTree = "<group>"; };
+		FD12A6710E9235DB004BBD7B /* DirectHW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectHW.h; sourceTree = "<group>"; };
+		FDC4F1CB0E923CB30006B2A5 /* DirectHW-Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DirectHW-Framework-Info.plist"; sourceTree = "<group>"; };
+		FDC4F2B50E923DF00006B2A5 /* DirectHW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DirectHW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D9932D40D0F97D000760F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB83952125B4B678001D8E16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB83953525B4B6A5001D8E16 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC4F2B30E923DF00006B2A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB83950A25B4B4DA001D8E16 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D9932890D0F94EE00760F43 = {
+			isa = PBXGroup;
+			children = (
+				AB66BE3225B4AE4200943C69 /* Resources */,
+				63614FF92987AA7100593F0A /* Source Common */,
+				AB66BE2F25B4AE1C00943C69 /* Source Kernel */,
+				5D9932940D0F94F500760F43 /* Source User */,
+				5D99329C0D0F952400760F43 /* Products */,
+				AB66BE3025B4AE2600943C69 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5D9932940D0F94F500760F43 /* Source User */ = {
+			isa = PBXGroup;
+			children = (
+				FD12A6700E9235DB004BBD7B /* DirectHW.c */,
+				FD12A6710E9235DB004BBD7B /* DirectHW.h */,
+			);
+			name = "Source User";
+			sourceTree = "<group>";
+		};
+		5D99329C0D0F952400760F43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D9932D60D0F97D000760F43 /* DirectHW.kext */,
+				FDC4F2B50E923DF00006B2A5 /* DirectHW.framework */,
+				AB83952325B4B678001D8E16 /* libDirectHW.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63614FF92987AA7100593F0A /* Source Common */ = {
+			isa = PBXGroup;
+			children = (
+				63ECBFC82984EDB80031C612 /* MacOSMacros.h */,
+			);
+			name = "Source Common";
+			sourceTree = "<group>";
+		};
+		AB66BE2F25B4AE1C00943C69 /* Source Kernel */ = {
+			isa = PBXGroup;
+			children = (
+				5D9932B30D0F95DD00760F43 /* DirectHW.cpp */,
+				5D9932B40D0F95DD00760F43 /* DirectHW.hpp */,
+			);
+			name = "Source Kernel";
+			sourceTree = "<group>";
+		};
+		AB66BE3025B4AE2600943C69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB66BE3125B4AE2C00943C69 /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB66BE3225B4AE4200943C69 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D9932D70D0F97D000760F43 /* DirectHW-Info.plist */,
+				FDC4F1CB0E923CB30006B2A5 /* DirectHW-Framework-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AB83951F25B4B678001D8E16 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB83952A25B4B69B001D8E16 /* DirectHW.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC4F2B00E923DF00006B2A5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC4F2BC0E923E0C0006B2A5 /* DirectHW.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5D9932D50D0F97D000760F43 /* KEXT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D9932DB0D0F97D100760F43 /* Build configuration list for PBXNativeTarget "KEXT" */;
+			buildPhases = (
+				5D9932D20D0F97D000760F43 /* Sources */,
+				5D9932D40D0F97D000760F43 /* Frameworks */,
+				5D9932D30D0F97D000760F43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KEXT;
+			productName = DirectHW;
+			productReference = 5D9932D60D0F97D000760F43 /* DirectHW.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		AB83952225B4B678001D8E16 /* libDirectHW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB83952425B4B678001D8E16 /* Build configuration list for PBXNativeTarget "libDirectHW" */;
+			buildPhases = (
+				AB83952025B4B678001D8E16 /* Sources */,
+				AB83952125B4B678001D8E16 /* Frameworks */,
+				AB83951F25B4B678001D8E16 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libDirectHW;
+			productName = libDirectHW;
+			productReference = AB83952325B4B678001D8E16 /* libDirectHW.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FDC4F2B40E923DF00006B2A5 /* DirectHW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDC4F2C00E923E2B0006B2A5 /* Build configuration list for PBXNativeTarget "DirectHW" */;
+			buildPhases = (
+				FDC4F2B20E923DF00006B2A5 /* Sources */,
+				FDC4F2B30E923DF00006B2A5 /* Frameworks */,
+				FDC4F2B00E923DF00006B2A5 /* Headers */,
+				FDC4F2B10E923DF00006B2A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DirectHW;
+			productName = DirectHW;
+			productReference = FDC4F2B50E923DF00006B2A5 /* DirectHW.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D99328B0D0F94EE00760F43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					5D9932D50D0F97D000760F43 = {
+						DevelopmentTeam = YZAQ856TTM;
+					};
+					AB83952225B4B678001D8E16 = {
+						CreatedOnToolsVersion = 12.3;
+						DevelopmentTeam = YZAQ856TTM;
+						ProvisioningStyle = Automatic;
+					};
+					FDC4F2B40E923DF00006B2A5 = {
+						DevelopmentTeam = YZAQ856TTM;
+					};
+				};
+			};
+			buildConfigurationList = 5D99328E0D0F94EE00760F43 /* Build configuration list for PBXProject "DirectHW10.6" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5D9932890D0F94EE00760F43;
+			productRefGroup = 5D99329C0D0F952400760F43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D9932D50D0F97D000760F43 /* KEXT */,
+				FDC4F2B40E923DF00006B2A5 /* DirectHW */,
+				AB83952225B4B678001D8E16 /* libDirectHW */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D9932D30D0F97D000760F43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC4F2B10E923DF00006B2A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D9932D20D0F97D000760F43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D9932DD0D0F97EF00760F43 /* DirectHW.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB83952025B4B678001D8E16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB83953125B4B6A1001D8E16 /* DirectHW.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC4F2B20E923DF00006B2A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC4F2BD0E923E100006B2A5 /* DirectHW.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5D99328C0D0F94EE00760F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					x86_64,
+					i386,
+					ppc,
+					ppc64,
+				);
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_REUSE_STRINGS = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				"GCC_VERSION[sdk=macosx10.4][arch=*]" = 4.0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = "DirectHW-Info.plist";
+				KEEP_PRIVATE_EXTERNS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc64]" = 10.5;
+				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DDEBUG_KEXT=1",
+					"-DDEBUG=1",
+					"$(OTHER_CFLAGS)",
+				);
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx10.4;
+				"SDKROOT[arch=ppc64]" = macosx10.5;
+				"SDKROOT[arch=x86_64]" = macosx10.5;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = build/build10.6;
+			};
+			name = Debug;
+		};
+		5D99328D0D0F94EE00760F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					x86_64,
+					i386,
+					ppc,
+					ppc64,
+				);
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_UNROLL_LOOPS = YES;
+				"GCC_VERSION[sdk=macosx10.4][arch=*]" = 4.0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = "DirectHW-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc64]" = 10.5;
+				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
+				SDKROOT = macosx10.4;
+				"SDKROOT[arch=ppc64]" = macosx10.5;
+				"SDKROOT[arch=x86_64]" = macosx10.5;
+				SYMROOT = build/build10.6;
+			};
+			name = Release;
+		};
+		5D9932D90D0F97D100760F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					x86_64,
+					i386,
+					ppc,
+				);
+				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				GCC_MODEL_TUNING = G5;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"MODULE_VERSION=$(MODULE_VERSION)",
+					"PRODUCT_NAME=$(PRODUCT_NAME)",
+					"$(inherited)",
+				);
+				GCC_REUSE_STRINGS = YES;
+				HEADER_SEARCH_PATHS = "${SDK}/usr/include";
+				INFOPLIST_FILE = "DirectHW-Info.plist";
+				INSTALL_GROUP = wheel;
+				INSTALL_OWNER = root;
+				KEEP_PRIVATE_EXTERNS = YES;
+				MARKETING_VERSION = 1.6.1;
+				MODULE_NAME = com.coresystems.DirectHW;
+				MODULE_VERSION = 1.6.1;
+				"OTHER_CFLAGS[arch=ppc]" = "-DKPI_10_4_0_PPC_COMPAT";
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-no_uuid",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.coresystems.DirectHW;
+				PRODUCT_NAME = DirectHW;
+				"SDKROOT[arch=x86_64]" = macosx10.6;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		5D9932DA0D0F97D100760F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					x86_64,
+					i386,
+					ppc,
+				);
+				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				GCC_MODEL_TUNING = G5;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"MODULE_VERSION=$(MODULE_VERSION)",
+					"PRODUCT_NAME=$(PRODUCT_NAME)",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = "${SDK}/usr/include";
+				INFOPLIST_FILE = "DirectHW-Info.plist";
+				INSTALL_GROUP = wheel;
+				INSTALL_OWNER = root;
+				KEEP_PRIVATE_EXTERNS = YES;
+				MARKETING_VERSION = 1.6.1;
+				MODULE_NAME = com.coresystems.DirectHW;
+				MODULE_VERSION = 1.6.1;
+				"OTHER_CFLAGS[arch=ppc]" = "-DKPI_10_4_0_PPC_COMPAT";
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-no_uuid",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.coresystems.DirectHW;
+				PRODUCT_NAME = DirectHW;
+				"SDKROOT[arch=x86_64]" = macosx10.6;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+		AB83952525B4B678001D8E16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_MODULE_NAME = DirectHW;
+				PRODUCT_NAME = DirectHW;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AB83952625B4B678001D8E16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_MODULE_NAME = DirectHW;
+				PRODUCT_NAME = DirectHW;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FDC4F2B60E923DF00006B2A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1.6.1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"MODULE_VERSION=$(MODULE_VERSION)",
+					"PRODUCT_NAME=$(PRODUCT_NAME)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DirectHW-Framework-Info.plist";
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Frameworks";
+				KEEP_PRIVATE_EXTERNS = NO;
+				MARKETING_VERSION = 1.6.1;
+				MODULE_VERSION = 1.6.1;
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coresystems.DirectHW;
+				PRODUCT_NAME = DirectHW;
+			};
+			name = Debug;
+		};
+		FDC4F2B70E923DF00006B2A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.6.1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"MODULE_VERSION=$(MODULE_VERSION)",
+					"PRODUCT_NAME=$(PRODUCT_NAME)",
+				);
+				INFOPLIST_FILE = "DirectHW-Framework-Info.plist";
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Frameworks";
+				MARKETING_VERSION = 1.6.1;
+				MODULE_VERSION = 1.6.1;
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coresystems.DirectHW;
+				PRODUCT_NAME = DirectHW;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D99328E0D0F94EE00760F43 /* Build configuration list for PBXProject "DirectHW10.6" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D99328C0D0F94EE00760F43 /* Debug */,
+				5D99328D0D0F94EE00760F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D9932DB0D0F97D100760F43 /* Build configuration list for PBXNativeTarget "KEXT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D9932D90D0F97D100760F43 /* Debug */,
+				5D9932DA0D0F97D100760F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB83952425B4B678001D8E16 /* Build configuration list for PBXNativeTarget "libDirectHW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB83952525B4B678001D8E16 /* Debug */,
+				AB83952625B4B678001D8E16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDC4F2C00E923E2B0006B2A5 /* Build configuration list for PBXNativeTarget "DirectHW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDC4F2B60E923DF00006B2A5 /* Debug */,
+				FDC4F2B70E923DF00006B2A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5D99328B0D0F94EE00760F43 /* Project object */;
+}

@@ -1,0 +1,315 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		06AA1265FFB2107B11CA28AA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				PREBINDING = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		06AA1266FFB2107B11CA28AA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PREBINDING = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+//060
+//061
+//062
+//063
+//064
+//080
+//081
+//082
+//083
+//084
+		089C1669FE841209C02AAC07 = {
+			buildSettings = {
+			};
+			buildStyles = (
+				06AA1265FFB2107B11CA28AA,
+				06AA1266FFB2107B11CA28AA,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 089C166AFE841209C02AAC07;
+			projectDirPath = "";
+			targets = (
+				32D94FC30562CBF700B6AF17,
+			);
+		};
+		089C166AFE841209C02AAC07 = {
+			children = (
+				247142CAFF3F8F9811CA285C,
+				8DA80CCF06AD972A00E5AC22,
+				089C167CFE841241C02AAC07,
+				19C28FB6FE9D52B211CA2CBB,
+			);
+			isa = PBXGroup;
+			name = DirectHW10.3;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 = {
+			children = (
+				32D94FCF0562CBF700B6AF17,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//080
+//081
+//082
+//083
+//084
+//190
+//191
+//192
+//193
+//194
+		19C28FB6FE9D52B211CA2CBB = {
+			children = (
+				32D94FD00562CBF700B6AF17,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//190
+//191
+//192
+//193
+//194
+//1A0
+//1A1
+//1A2
+//1A3
+//1A4
+		1A224C3EFF42367911CA2CB7 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			path = DirectHW.hpp;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1A224C3FFF42367911CA2CB7 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = DirectHW.cpp;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//1A0
+//1A1
+//1A2
+//1A3
+//1A4
+//240
+//241
+//242
+//243
+//244
+		247142CAFF3F8F9811CA285C = {
+			children = (
+				1A224C3EFF42367911CA2CB7,
+				1A224C3FFF42367911CA2CB7,
+				6382F0422C19B9CB009F4BF6,
+			);
+			isa = PBXGroup;
+			name = Source;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//240
+//241
+//242
+//243
+//244
+//320
+//321
+//322
+//323
+//324
+		32D94FC30562CBF700B6AF17 = {
+			buildPhases = (
+				32D94FC40562CBF700B6AF17,
+				32D94FC50562CBF700B6AF17,
+				32D94FC70562CBF700B6AF17,
+				32D94FC90562CBF700B6AF17,
+				32D94FCB0562CBF700B6AF17,
+				32D94FCC0562CBF700B6AF17,
+				32D94FCD0562CBF700B6AF17,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				INFOPLIST_FILE = "DirectHW10.3-Info.plist";
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = com.coresystems.DirectHW;
+				MODULE_VERSION = 1.6.1;
+				OTHER_CPLUSPLUSFLAGS = "-DMAC_OS_X_VERSION_SDK=1030";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coresystems.DirectHW;
+				PRODUCT_NAME = DirectHW;
+				WRAPPER_EXTENSION = kext;
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = DirectHW;
+			productInstallPath = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+			productName = DirectHW10.3;
+			productReference = 32D94FD00562CBF700B6AF17;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		32D94FC40562CBF700B6AF17 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXShellScriptBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "script=\"${SYSTEM_DEVELOPER_DIR}/ProjectBuilder Extras/Kernel Extension Support/KEXTPreprocess\";\nif [ -x \"$script\" ]; then\n    . \"$script\"\nfi";
+		};
+		32D94FC50562CBF700B6AF17 = {
+			buildActionMask = 2147483647;
+			files = (
+				32D94FC60562CBF700B6AF17,
+				6382F0432C19B9CB009F4BF6,
+			);
+			isa = PBXHeadersBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32D94FC60562CBF700B6AF17 = {
+			fileRef = 1A224C3EFF42367911CA2CB7;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		32D94FC70562CBF700B6AF17 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32D94FC90562CBF700B6AF17 = {
+			buildActionMask = 2147483647;
+			files = (
+				32D94FCA0562CBF700B6AF17,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32D94FCA0562CBF700B6AF17 = {
+			fileRef = 1A224C3FFF42367911CA2CB7;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		32D94FCB0562CBF700B6AF17 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32D94FCC0562CBF700B6AF17 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXRezBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32D94FCD0562CBF700B6AF17 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXShellScriptBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "script=\"${SYSTEM_DEVELOPER_DIR}/ProjectBuilder Extras/Kernel Extension Support/KEXTPostprocess\";\nif [ -x \"$script\" ]; then\n    . \"$script\"\nfi";
+		};
+		32D94FCF0562CBF700B6AF17 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = "DirectHW10.3-Info.plist";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		32D94FD00562CBF700B6AF17 = {
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = DirectHW.kext;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+//320
+//321
+//322
+//323
+//324
+//630
+//631
+//632
+//633
+//634
+		6382F0422C19B9CB009F4BF6 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = MacOSMacros.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		6382F0432C19B9CB009F4BF6 = {
+			fileRef = 6382F0422C19B9CB009F4BF6;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//630
+//631
+//632
+//633
+//634
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+		8DA80CCF06AD972A00E5AC22 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Kernel.framework;
+			path = /System/Library/Frameworks/Kernel.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+	};
+	rootObject = 089C1669FE841209C02AAC07;
+}
